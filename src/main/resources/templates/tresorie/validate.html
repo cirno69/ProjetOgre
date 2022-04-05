@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <link rel="icon" type="image/png"  href="/images/logos/ATILLA.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+    <title>ATILLA</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+</head>
+<body>
+    <div th:replace = "miseEnForme/header :: header"></div>
+    <div class="content">
+        <br><br><br>
+    <table class="tableau">
+        <thead>
+            <tr>
+                <th> Nom </th>
+                <th> Prénom </th>
+                <th> Genre </th>
+                <th> Date de naissance </th>
+                <th> Promo </th>
+                <th> Campus </th>
+                <th> Email </th>
+                <th> Valider </th>
+                <th> Refuser </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="adherant,iterStat : ${adherants}" th:class="${iterStat.odd}? 'odd' : 'even'">
+                <td class="clickable" th:text="${adherant.nom}" th:attr="onclick=|location.href='/admin/adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.prenom}" th:attr="onclick=|location.href='/admin/adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.genre}" th:attr="onclick=|location.href='/admin/adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.dateDeNaissance}" th:attr="onclick=|location.href='/admin/adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.promo}" th:attr="onclick=|location.href='/admin/adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.campus}" th:attr="onclick=|location.href='/admin/adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.email}" th:attr="onclick=|location.href='/admin/adherant/${adherant.id}'|"></td>
+                <td class="edit clickable"><img src="/images/coche.png" height="40px" width="40px" alt=""  th:attr="onclick=|location.href='/tresorie/validation/validate/${adherant.id}'|"></td>
+                <td class="suppr clickable"><img src="/images/croix.png" height="40px" width="40px" alt="" th:attr="onclick=|location.href='/tresorie/validation/unvalidate/${adherant.id}'|"></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div th:replace="miseEnForme/footer :: footer"></div>
+</body>

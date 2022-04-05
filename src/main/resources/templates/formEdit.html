@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <link rel="icon" type="image/png"  href="/images/logos/ATILLA.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+    <title>ATILLA</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no; fr, charset=UTF-8">
+    
+</head>
+<body>
+    <div th:replace = "miseEnForme/header :: header"></div>
+    <div class="content">
+        <div class="center justify">
+        <form th:action="@{/admin/save}" th:object="${adherant}" method="POST">
+            <div>
+                <br/>
+                <input type="hidden" th:field="*{id}">
+                <label for="prenom">Prenom :</label>
+                <input required type="text" th:field="*{prenom}" class="formTextbox" >
+                
+            </div>
+            <br>
+            <div>
+                <label for="nom">Nom :</label>
+                <input required type="text" th:field="*{nom}" class="formTextbox" >
+                
+            </div>
+            <br>
+            <div>
+                <label for="genre">Genre :</label> <br>
+                <input type="radio"  class="formRadio" th:field="*{genre}"  th:value="M">Masculin <br>
+                <input type="radio" class="formRadio" th:field="*{genre}" th:value="F">Féminin <br>
+                <label onclick="otherGenre()">
+                <input type="radio" class="formRadio"  name="genre" value="" id="other_genre">Autre
+                </label> <br> <br>
+            </div>
+            <div>
+                <label for="date">Date de naissance :</label>
+                <input required type="date" id="date" class="formTextbox" th:field="*{dateDeNaissance}" >
+            </div>
+            <br>
+            <div>
+                <label for="promo">Promo et spécialité :</label>
+                <select th:field="*{promo}" class="formTextbox">
+                    <option value="Pré-ING 1">Pré-ING 1</option>
+                    <option value="Pré-ING 2">Pré-ING 2</option>
+                    <option value="ING 1 GI">ING 1 GI</option>
+                    <option value="ING 1 GM">ING 1 GM</option>
+                    <option value="ING 2 GSI">ING 2 GSI</option>
+                    <option value="ING 2 SIE">ING 2 SIE</option>
+                    <option value="ING 2 MI">ING 2 MI</option>
+                    <option value="ING 2 MF">ING 2 MF</option>
+                    <option value="ING 3 GI">ING 3 GI</option>
+                    <option value="ING 3 GM">ING 3 GM</option>
+                    <option value="Ancien">Ancien</option>
+                    <option value="Exté">Exté</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="campus">Campus :</label><br>
+                <input type="radio" th:field="*{campus}" th:value="Cergy" class="formRadio"  >Cergy <br>
+                <input type="radio" th:field="*{campus}" th:value="Pau" class="formRadio" >Pau <br>
+                <input type="radio" th:field="*{campus}" th:value="ST-Germain-En-Lay" class="formRadio" >ST-Germain-En-Lay <br>
+            </div>
+            <br>
+            <div>
+                <Label for="email">Adresse Mail de l'école :</Label>
+                <input required th:field="*{email}" type="text"  class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <label for="mailingListe">MailingList :</label><br>
+                <input type="radio" th:field="*{mailingListe}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{mailingListe}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="cotisant">Cotisation :</label><br>
+                <input type="radio" th:field="*{cotisant}" class="formRadio"  th:value="1"> Oui
+                <input type="radio" th:field="*{cotisant}" class="formRadio"  th:value="2"> Pas encore validé
+                <input type="radio" th:field="*{cotisant}" class="formRadio"  th:value="0"> Non
+                <br><br>
+            </div>
+            <br>
+            <div>
+                <label for="connaissancesInfo">Connaissances en informatique :</label><br>
+                <textarea required th:field="*{connaissancesInfo}" cols="90" rows="5"></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="attentes">Attentes :</label><br>
+                <textarea required th:field="*{attentes}" cols="90" rows="5"></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="centresInteret">Centres d'interet :</label><br>
+                <textarea required th:field="*{centresInteret}" cols="90" rows="5"></textarea>
+            </div>
+            <br>
+            <div>
+                <input class="clickable" type="checkbox" name="conditions" required>
+                <label for="conditions">Valider les modificatons :</label>
+            </div>
+            <br>
+            <input class="formSubmit" type="submit" value="valider">
+          </form>
+        </div>
+    </div>
+    <div th:replace="miseEnForme/footer :: footer"></div>
+</body>
+</html>

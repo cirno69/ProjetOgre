@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <link rel="icon" type="image/png"  href="/images/logos/ATILLA.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+    <title>ATILLA</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+</head>
+<body>
+    <div th:replace = "miseEnForme/header :: header"></div>
+    <div class="content">
+    <br/><br/>
+    <div class="centerbt">
+    <button class="btn-grad" th:attr="onclick=|biencopie('${mailinglist}')|">
+        Copier la mailing Liste 
+    </button>
+    </div>
+    
+   
+    
+    <br><br><br>
+    <div>
+        <p class="titretab">Liste des cotisants</p>
+    </div>
+    <table class="tableau">
+        <thead>
+            
+            <tr>
+                <th> Nom </th>
+                <th> Prénom </th>
+                <th> Genre </th>
+                <th> Date de naissance </th>
+                <th> Promo </th>
+                <th> Campus </th>
+                <th> Email </th>
+                <th> Mailinglist </th>
+                <th> Cotisant </th>
+                <th> Editer </th>
+                <th> Supprimer </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="adherant,iterStat : ${adherants}" th:class="${iterStat.odd}? 'odd' : 'even'">
+                <td class="clickable" th:text="${adherant.nom}" th:attr="onclick=|location.href='adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.prenom}" th:attr="onclick=|location.href='adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.genre}" th:attr="onclick=|location.href='adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.dateDeNaissance}" th:attr="onclick=|location.href='adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.promo}" th:attr="onclick=|location.href='adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.campus}" th:attr="onclick=|location.href='adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:text="${adherant.email}" th:attr="onclick=|location.href='adherant/${adherant.id}'|"></td>
+                <td class="clickable" th:if="${adherant.mailingListe } == true" th:attr="onclick=|location.href='adherant/${adherant.id}'|">oui</td>
+                <td class="clickable" th:if="${adherant.mailingListe } == false" th:attr="onclick=|location.href='adherant/${adherant.id}'|">non</td>
+                <td class="clickable" th:if="${adherant.cotisant == 0}" th:attr="onclick=|location.href='adherant/${adherant.id}'|">Non cotisant</td>
+                <td class="clickable" th:if="${adherant.cotisant == 1}" th:attr="onclick=|location.href='adherant/${adherant.id}'|">Cotisant</td>
+                <td class="clickable" th:if="${adherant.cotisant == 2}" th:attr="onclick=|location.href='adherant/${adherant.id}'|">En cours</td>
+                <td class="edit clickable"><img src="/images/edit.png" height="40px" width="40px" alt="" th:attr="onclick=|location.href='edit/${adherant.id}'|"></td>
+                <td class="suppr clickable"><img src="/images/croix.png" height="40px" width="40px" alt="" th:attr="onclick=|location.href='deleteA/${adherant.id}'|"></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div th:replace="miseEnForme/footer :: footer"></div>
+</body>
