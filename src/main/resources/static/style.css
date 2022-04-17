@@ -39,13 +39,13 @@ a{
 }
 
 a:hover{
-    color: #FDA725;
+    color: #D8AFB5;
 }
 
 .title{
     padding: 1rem;
     font-size: 25px;
-    color:#FDA725;
+    color:#D8AFB5;
     text-align: center;
     font-weight: bold;
 }
@@ -58,8 +58,8 @@ a:hover{
 /*HEADER*/
 .header{
     width: 100%;
-    height: 50px;
-    background-color: #444444;
+    height: 60px;
+    background-color: #1A1C38;
     font-size: 20px;
     position:fixed;
     margin-top:0px;
@@ -80,7 +80,7 @@ a:hover{
     margin-left:10px;
     border-radius: 5px 5px 5px 5px;
     padding: 5px;
-    color:#FDA725;
+    color:white;
     width: fit-content;
     cursor: pointer;
     @-moz-document url-prefix() {
@@ -89,17 +89,17 @@ a:hover{
     
 }
 .headerButton:hover,.headerCompte:hover,.headerLogout:hover{
-     background-color: #565656;
+     background-color: #1A1C38;
 }
     
 .headerCompte{
     text-decoration: none;
 
     float: right;
-    background-color: #444444;
+    background-color: #1A1C38;
     border-radius: 5px 5px 5px 5px;
     padding: 5px;
-    color:#FDA725;
+    color:white;
     width: fit-content;
     margin-top: 9px;
     margin-right: 2rem;
@@ -112,11 +112,11 @@ a:hover{
     text-decoration: none;
     border-radius: 5px 5px 5px 5px;
     float: right;
-    background-color: #444444;
+    background-color: #1A1C38;
     border: none;
     font-size: 20px;
     padding: 5px;
-    color:#FDA725;
+    color:white;
     width: fit-content;
     margin-top: 9px;
     margin-right: 2rem;
@@ -138,7 +138,7 @@ a:hover{
     margin-top: 2rem;
     width: 100%;
     height: 20%;
-    background-color: #444444;
+    background-color: #1A1C38;
     font-size: 20px;
     color:white;
     padding: 20px;
@@ -148,12 +148,12 @@ a:hover{
 
 .footerLien{
     text-decoration: none;
-    color: #FDA725;
+    color: white;
     padding: 20px;
 }
 
 .footerLien:hover{
-    color:gray;
+    color:#D8AFB5;
 }
 
 /*HOME PAGE*/
@@ -162,7 +162,7 @@ a:hover{
     text-align: center;
     font-weight: bolder;
     font-size: 40px;
-    background-color:#FDA725;
+    background-color:#D8AFB5;
     color: white;
     padding-top: 5rem;
     padding-bottom: 3rem;
@@ -182,7 +182,7 @@ a:hover{
     width: 100%;
     padding: 1rem;
     color:white;
-    background-color: #FDA725;
+    background-color: #D8AFB5;
     font-weight: bold;
     font-size: 20px;
     border: none;
@@ -190,19 +190,19 @@ a:hover{
 }
 
 .formSubmit:hover{
-    background-color:rgb(250, 184, 85);
+    background-color:peachpuff;
 }
 
 textarea{
     width:100%;
-    border:3px solid #666666 ;
+    border:3px solid #1A1C38 ;
     border-radius:2px 2px 2px 2px ;
     background-color: lightgrey;
     resize: none;
 }
 
 .formTextbox{
-    border:3px solid #666666 ;
+    border:3px solid #1A1C38 ;
     border-radius:2px 2px 2px 2px ;
     background-color: lightgrey;
 }
@@ -211,7 +211,7 @@ textarea{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; 
-    border: 3px solid #666666 ;
+    border: 3px solid #1A1C38 ;
     width: 16px;
     height: 16px;
     border-radius: 8px 8px 8px 8px;
@@ -220,8 +220,8 @@ textarea{
 }
 
 .formRadio:checked{
-    border: 4px solid #666666;
-    background-color: #FDA725;
+    border: 4px solid #1A1C38;
+    background-color: white;
 }
 
 /*PAGES*/
@@ -240,14 +240,14 @@ textarea{
 .titretab {
     text-align: center;
     background-color: #666666;
-    color: #FDA725;
+    color: #D8AFB5;
     width:100%;
   }
 
 .tableau th{
     text-align: center;
     background-color: #666666;
-    color: #FDA725;
+    color: #D8AFB5;
   }
 
 
@@ -266,7 +266,7 @@ tr.even{
 
   
 
-.btn-grad {background-color: #FDA725;}
+.btn-grad {background-color: #D8AFB5;}
 .btn-grad {
      margin: 10px;
      padding: 15px 45px;
@@ -282,7 +282,7 @@ tr.even{
      border: none;
    }
    .btn-grad:hover{
-       background-color:#FDA725 ;
+       background-color:#D8AFB5 ;
    }
 
 .centerbt{
