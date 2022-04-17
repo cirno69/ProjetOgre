@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
-    <link rel="icon" type="image/png"  href="/images/logos/ATILLA.png">
+    <link rel="icon" type="image/png"  href="/images/logos/OGRE.png">
     <link rel="stylesheet" href="/style.css">
     <script src="/script.js"></script>
     <title>OGRE</title> 
@@ -10,25 +10,13 @@
 </head>
 <body>
     <div th:replace = "miseEnForme/header :: header"></div>
-    <div class="homePageWelcome">Bienvenue à ATILLA! </div>
+    <div class="homePageWelcome">Bienvenue sur OGRE! </div>
 
     <div class="content">
-            <div class="title">Qui sommes nous?</div>
-            <div class="center">
+        <div class="title">Qui sommes nous?</div>
+        <div class="center">
                             
-                NOUS SOMMES DES ÉTUDIANTS PASSIONNÉS. PARTAGEONS CETTE PASSION.
-                <br/><br/>
-                Chacun des membres d'ATILLA dispose d'une palette de connaissances et de spécialités qu'il est prêt à partager. 
-                Mutualiser ses expertises nous permet de réaliser toute sorte de projets afin d'améliorer le quotidien des 
-                étudiants de CY Tech et améliorer l'infrastructure de l'association.
-
-                <br/><br/>
-
-                
-
-                <div class="title">Comment devenir membre?</div>
-                <div>C'est très simple tu peux soit cliquer sur ce <a th:href="@{/form}">lien</a>, soit scaner le code bar !</div>
-                <div><img class="homePageImage" src="/images/HomePage/qrcode_localhost.png" /></div>
+           
         </div>
     </div>
 <div th:replace="miseEnForme/footer :: footer"></div>
