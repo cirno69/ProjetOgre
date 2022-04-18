@@ -1,8 +1,8 @@
-package org.atilla.atillaadhesion.service;
+package org.CYJE.Ogre.service;
 
 import java.util.List;
 
-import org.atilla.atillaadhesion.entity.Adherant;
+import org.CYJE.Ogre.entity.Adherant;
 
 public interface AdherantService {
 	

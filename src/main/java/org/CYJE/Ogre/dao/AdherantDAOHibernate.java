@@ -1,9 +1,9 @@
-package org.atilla.atillaadhesion.dao;
+package org.CYJE.Ogre.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import org.atilla.atillaadhesion.entity.Adherant;
+import org.CYJE.Ogre.entity.Adherant;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,9 @@
-package org.atilla.atillaadhesion.service;
+package org.CYJE.Ogre.service;
 
 import java.util.List;
 
-import org.atilla.atillaadhesion.dao.AdherantDAO;
-import org.atilla.atillaadhesion.entity.Adherant;
+import org.CYJE.Ogre.dao.AdherantDAO;
+import org.CYJE.Ogre.entity.Adherant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
