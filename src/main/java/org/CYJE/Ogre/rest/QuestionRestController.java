@@ -1,9 +1,9 @@
-package org.atilla.atillaadhesion.rest;
+package org.CYJE.Ogre.rest;
 
 import java.util.List;
 
-import org.atilla.atillaadhesion.entity.Question;
-import org.atilla.atillaadhesion.service.QuestionService;
+import org.CYJE.Ogre.entity.Question;
+import org.CYJE.Ogre.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

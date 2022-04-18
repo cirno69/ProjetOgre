@@ -1,7 +1,7 @@
-package org.atilla.atillaadhesion.controller;
+package org.CYJE.Ogre.controller;
 
-import org.atilla.atillaadhesion.entity.Adherant;
-import org.atilla.atillaadhesion.service.AdherantService;
+import org.CYJE.Ogre.entity.Adherant;
+import org.CYJE.Ogre.service.AdherantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

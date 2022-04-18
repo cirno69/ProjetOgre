@@ -1,4 +1,4 @@
-package org.atilla.atillaadhesion.entity;
+package org.CYJE.Ogre.entity;
 
 
 

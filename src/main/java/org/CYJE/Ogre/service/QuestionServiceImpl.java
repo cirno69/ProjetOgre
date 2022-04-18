@@ -1,9 +1,9 @@
-package org.atilla.atillaadhesion.service;
+package org.CYJE.Ogre.service;
 
 import java.util.List;
 
-import org.atilla.atillaadhesion.dao.QuestionDAO;
-import org.atilla.atillaadhesion.entity.Question;
+import org.CYJE.Ogre.dao.QuestionDAO;
+import org.CYJE.Ogre.entity.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

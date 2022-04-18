@@ -1,8 +1,8 @@
-package org.atilla.atillaadhesion.dao;
+package org.CYJE.Ogre.dao;
 
 import java.util.List;
 
-import org.atilla.atillaadhesion.entity.Question;
+import org.CYJE.Ogre.entity.Question;
 
 public interface QuestionDAO {
 	

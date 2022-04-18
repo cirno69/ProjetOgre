@@ -8,12 +8,12 @@
 		<version>2.6.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.atilla</groupId>
-	<artifactId>atilla-adhesion</artifactId>
+	<groupId>org.Ogre</groupId>
+	<artifactId>Ogre</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>atilla-adhesion</name>
-	<description>Adhesion pour les membres de l'association ATILLA</description>
+	<name>Ogre</name>
+	<description>simulation d'un serious game</description>
 	<properties>
 		<java.version>17</java.version>
 		<maven-jar-plugin.version>3.1.1 </maven-jar-plugin.version>

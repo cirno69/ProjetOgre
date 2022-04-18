@@ -1,9 +1,9 @@
-package org.atilla.atillaadhesion.rest;
+package org.CYJE.Ogre.rest;
 
 import java.util.List;
 
-import org.atilla.atillaadhesion.entity.Adherant;
-import org.atilla.atillaadhesion.service.AdherantService;
+import org.CYJE.Ogre.entity.Adherant;
+import org.CYJE.Ogre.service.AdherantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

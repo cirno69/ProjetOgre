@@ -1,4 +1,4 @@
-package org.atilla.atillaadhesion;
+package org.CYJE.Ogre;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(AtillaAdhesionApplication.class);
+		return application.sources(OgreApplication.class);
 	}
 
 }
