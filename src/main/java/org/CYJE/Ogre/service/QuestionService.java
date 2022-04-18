@@ -5,6 +5,8 @@ import java.util.List;
 import org.CYJE.Ogre.entity.Question;
 
 public interface QuestionService {
-	
-	public List<Question> getQuestion();	
+
+	public List<Question> getQuestion();
+	public Question getReponse(int id);
+	public void saveReponse(Question reponses);
 }

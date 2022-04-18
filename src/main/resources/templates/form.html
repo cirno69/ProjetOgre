@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+    <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
     <link rel="icon" type="image/png"  href="/images/logos/OGRE.png">
@@ -13,19 +13,67 @@
     <div th:replace = "miseEnForme/header :: header"></div>
     <div class="content">
         <div class="center justify">
-        <form  th:action="@{/form/save}" th:object="${adherant}" method="POST">
+        <form  th:action="@{/form/save}" th:object="${question}" method="POST">
             <div>
                 <br/>
-                <label for="prenom">Prenom :</label>
+                <label for="prenom">Quel est votre prénom ?</label>
                 <input required type="text" th:field="*{prenom}" class="formTextbox" >
                 
             </div>
             <br>
             <div>
-                <label for="nom">Nom :</label>
-                <input required type="text" th:field="*{nom}" class="formTextbox" >
-                
+                <Label for="email">Quelle est votre adresse e-mail ?</Label>
+                <input required type="text"  th:field="*{email}" class="formTextbox" >
+
             </div>
+            <br>
+            <div>
+                <Label for="pays">Quel est votre pays de résidence ?</Label>
+                <input required type="text"  th:field="*{pays}" class="formTextbox" >
+
+            </div>
+            <br>
+            <div>
+                <Label for="voiturePossede">Avez-vous une voiture ?</Label>
+                <input required type="text"  th:field="*{voiturePossede}" class="formTextbox" >
+
+            </div>
+            <br>
+            <div>
+                <Label for="voitureKM">Même si vous ne possédez pas de voiture, combien de kilomètres par an effectuez-vous en moyenne (avec d'autres personnes) ?</Label>
+                <input required type="text"  th:field="*{voitureKM}" class="formTextbox" >
+
+            </div>
+            <br>
+            <div>
+                <Label for="voitureEnergie">Quelle énergie utilise votre voiture ?</Label>
+                <input required type="text"  th:field="*{voitureEnergie}" class="formTextbox" >
+
+            </div>
+            <br>
+            <div>
+                <Label for="voitureConso">Quelle est la consommation moyenne, en litres pour 100 kilomètres, de ce véhicule ? (ex: 6)</Label>
+                <input required type="text"  th:field="*{voitureConso}" class="formTextbox" >
+
+            </div>
+            <br>
+            <div>
+                <Label for="voitureKMSeul">(VOITURE) En moyenne, combien de kilomètres par an parcourez-vous seul ?</Label>
+                <input required type="text"  th:field="*{voitureKMSeul}" class="formTextbox" >
+
+            </div>
+            <br>
+            <div>
+                <Label for="voitureKMTous">(VOITURE) En moyenne, combien de kilomètres par an parcourez-vous avec les personnes composant le ménage ? (ex: vacances)</Label>
+                <input required type="text"  th:field="*{voitureKMTous}" class="formTextbox" >
+
+            </div>
+
+
+
+
+
+            <!--
             <br>
             <div>
                 <label for="genre">Genre :</label> <br>
@@ -65,9 +113,6 @@
             </div>
             <br>
             <div>
-                <Label for="email">Adresse Mail de l'école :</Label>
-
-              <input required type="text"  th:field="*{email}" class="formTextbox" >
 
          
 
@@ -108,6 +153,8 @@
 
                 <label for="conditions">Je déclare avoir pris connaissance de la charte et du règlement intérieur de l’association, m’engage à les respecter et à les faire respecter pour l’année universitaire 2021/2022.</label>
             </div>
+
+            -->
             <br>
             <div class="g-recaptcha" 
             data-callback="recaptchaCallback"

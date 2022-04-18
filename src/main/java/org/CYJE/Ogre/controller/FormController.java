@@ -1,7 +1,9 @@
 package org.CYJE.Ogre.controller;
 
 import org.CYJE.Ogre.entity.Adherant;
+import org.CYJE.Ogre.entity.Question;
 import org.CYJE.Ogre.service.AdherantService;
+import org.CYJE.Ogre.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,31 +19,31 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class FormController {
 	
-	private AdherantService adherantService;
+	private QuestionService questionService;
 	
 	@Autowired
-	public FormController(AdherantService adherantService) {
-		this.adherantService = adherantService;
+	public FormController(QuestionService questionService) {
+		this.questionService = questionService;
 	}
 	
 	@GetMapping("/form")
 	public String showForm(Model model) {
-		Adherant adherant = new Adherant();
-		model.addAttribute("adherant",adherant);
+		Question question = new Question();
+		model.addAttribute("question", question);
 		return "form";
 	}
 	
 //	@GetMapping("edit/{id}")
 	@RequestMapping(value = "edit/{id}", method = RequestMethod.GET)
 	public String showEditForm(Model model, @PathVariable int id) { 
-		Adherant adherant = adherantService.getAdherant(id);
-		model.addAttribute("adherant",adherant);
+		Question question = questionService.getReponse(id);
+		model.addAttribute("question", question);
 		return "formEdit.html";
 	}
 
 	@PostMapping("/save")
-	public String saveAdherant(@ModelAttribute("adherant") Adherant adherant) {
-		adherantService.saveAdherant(adherant);
+	public String saveReponse(@ModelAttribute("question") Question question) {
+		questionService.saveReponse(question);
 		return "redirect:/";
 	}
 	
@@ -49,8 +51,8 @@ public class FormController {
 	
 	
 	@PutMapping("/edit")
-	public String editAdherant(@ModelAttribute("adherant") Adherant adherant) {
-		adherantService.saveAdherant(adherant);
+	public String editReponse(@ModelAttribute("question") Question question) {
+		questionService.saveReponse(question);
 		return "redirect:/";
 	}
 

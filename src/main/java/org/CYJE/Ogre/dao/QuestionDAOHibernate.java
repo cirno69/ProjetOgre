@@ -3,6 +3,8 @@ package org.CYJE.Ogre.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+
+import org.CYJE.Ogre.entity.Adherant;
 import org.CYJE.Ogre.entity.Question;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -27,4 +29,16 @@ public class QuestionDAOHibernate implements QuestionDAO {
 		return questions;
 	}
 	
+	@Override
+	public Question getReponse(int id) {
+		Session session = entityManager.unwrap(Session.class);
+		Question reponse = session.get(Question.class,id);
+		return reponse;
+	}
+
+	@Override
+	public void saveReponse(Question reponses) {
+		Session session = entityManager.unwrap(Session.class);
+		session.saveOrUpdate(reponses);
+	}
 }
