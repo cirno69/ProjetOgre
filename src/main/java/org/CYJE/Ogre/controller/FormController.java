@@ -41,7 +41,7 @@ public class FormController {
 		return "formEdit.html";
 	}
 
-	@PostMapping("/save")
+	@PostMapping("/form/save")
 	public String saveReponse(@ModelAttribute("question") Question question) {
 		questionService.saveReponse(question);
 		return "redirect:/";

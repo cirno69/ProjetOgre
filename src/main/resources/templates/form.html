@@ -48,7 +48,6 @@
             <div>
                 <Label for="voitureEnergie">Quelle énergie utilise votre voiture ?</Label>
                 <input required type="text"  th:field="*{voitureEnergie}" class="formTextbox" >
-
             </div>
             <br>
             <div>
@@ -65,8 +64,253 @@
             <br>
             <div>
                 <Label for="voitureKMTous">(VOITURE) En moyenne, combien de kilomètres par an parcourez-vous avec les personnes composant le ménage ? (ex: vacances)</Label>
-                <input required type="text"  th:field="*{voitureKMTous}" class="formTextbox" >
-
+                <input required type="number"  th:field="*{voitureKMTous}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="voitureEnergie">Quelle énergie utilise votre voiture ?</Label>
+                <input required type="text"  th:field="*{voitureEnergie}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="voitureConso">Quelle est la consommation moyenne, en litres pour 100 kilomètres, de ce véhicule ? (ex: 6)</Label>
+                <input required type="number"  th:field="*{voitureConso}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="voitureKMSeul">(VOITURE) En moyenne, combien de kilomètres par an parcourez-vous seul ?</Label>
+                <input required type="number"  th:field="*{voitureKMSeul}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="voitureKMTous">(VOITURE) En moyenne, combien de kilomètres par an parcourez-vous avec les personnes composant le ménage ? (ex: vacances)</Label>
+                <input required type="number"  th:field="*{voitureKMTous}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="voitureRemplacement">En moyenne, quelle est votre fréquence de remplacement de votre véhicule ?</Label>
+                <input required type="text"  th:field="*{voitureRemplacement}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="avionKM">(AVION) En moyenne, combien de kilomètres par an parcourez-vous ? (faites une moyenne sur les 5 dernières années)</Label>
+                <input required type="number"  th:field="*{avionKM}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="trainKM">(TRAIN) En moyenne, combien de kilomètres par an parcourez-vous ? (faites une moyenne sur les 5 dernières années)</Label>
+                <input required type="number"  th:field="*{trainKM}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="logementAdulte">Combien d'adulte(s) habite(nt) au sein de votre logement ?</Label>
+                <input required type="number"  th:field="*{logementAdulte}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="logementEnfant">Combien d'enfant(s) de moins de 18 ans habite(nt) au sein de votre logement ?</Label>
+                <input required type="number"  th:field="*{logementEnfant}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="logementType">Quel est le type de votre logement ?</Label>
+                <input required type="text"  th:field="*{logementType}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="logementSurface">Quelle est la surface de votre logement (en m2) ?</Label>
+                <input required type="number"  th:field="*{logementSurface}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="chauffageEnergie">Quelle est l'énergie principale de chauffage ?</Label>
+                <input required type="text"  th:field="*{chauffageEnergie}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="energieKWH">Quel est le nombre de kWh (kilowatt-heure) consommé PAR AN ? Cette valeur est disponible sur la facture transmise par votre fournisseur d'énergie. Si jamais vous ne savez pas, vous pouvez passer à la question suivante où cette valeur vous est demandée en €</Label>
+                <input required type="number"  th:field="*{energieKWH}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="energieFacture">Quel est le montant de votre facture d'énergie ANNUELLE en € pour le chauffage (fioul, gaz, bois) ? Si vous avez un chauffage électrique, indiquez le montant ANNUEL de votre facture.</Label>
+                <input required type="number"  th:field="*{energieFacture}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="pompeChaleur">Est-ce que vous avez installé une pompe à chaleur de type air/eau ou eau/eau ?</Label>
+                <input required type="number"  th:field="*{pompeChaleur}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <label for="temperatureConfort">Votre température de confort est-elle supérieure à 19°C ?</label><br>
+                <input type="radio" th:field="*{temperatureConfort}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{temperatureConfort}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="climatisation">Votre température de confort est-elle supérieure à 19°C ?</label><br>
+                <input type="radio" th:field="*{climatisation}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{climatisation}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <Label for="climatisationPieces">Combien de pièces de votre logement sont équipées d'un système de climatisation ?</Label>
+                <input required type="number"  th:field="*{climatisationPieces}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="climatisationsTemps">En moyenne, combien de jours par an votre système de climatisation fonctionne-t-il ?</Label>
+                <input required type="number"  th:field="*{climatisationsTemps}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <label for="bainsOUDouches">Prenez-vous des bains ou des douches ?</label><br>
+                <input type="radio" th:field="*{bainsOUDouches}" class="formRadio" th:value="1"> Des bains
+                <input type="radio" th:field="*{bainsOUDouches}" class="formRadio" th:value="0"> Des douches
+            </div>
+            <br>
+            <div>
+                <Label for="doucheFrequence">En moyenne, combien de fois par jour prenez-vous une douche ?</Label>
+                <input required type="number"  th:field="*{doucheFrequence}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="doucheDuree">En moyenne, combien de temps dure une douche ?</Label>
+                <input required type="number"  th:field="*{doucheDuree}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <label for="bouilloire">Utilisez-vous une bouilloire pour chauffer l'eau ?</label><br>
+                <input type="radio" th:field="*{bouilloire}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{bouilloire}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <Label for="plaqueCuisson">En moyenne, combien de temps par jour utilisez-vous vos plaques de cuisson ? (en minutes)</Label>
+                <input required type="number"  th:field="*{plaqueCuisson}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="four">En moyenne, combien de temps par jour utilisez-vous votre four ? (en minutes)</Label>
+                <input required type="number"  th:field="*{four}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="laveLinge">En moyenne, combien de temps par jour utilisez-vous votre lave-linge ? (en minutes)</Label>
+                <input required type="number"  th:field="*{laveLinge}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="secheLinge">En moyenne, combien de temps par jour utilisez-vous votre sèche-linge ? (en minutes)</Label>
+                <input required type="number"  th:field="*{secheLinge}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="laveVaisselle">En moyenne, combien de temps par jour utilisez-vous votre lave-vaisselle ? (en minutes)</Label>
+                <input required type="number"  th:field="*{laveVaisselle}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="refrigirateur">Combien de réfrigérateur possédez-vous ?</Label>
+                <input required type="number"  th:field="*{refrigirateur}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="congelateur">Combien de congélateur possédez-vous ?</Label>
+                <input required type="number"  th:field="*{congelateur}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="eclairage">Quel est votre système d'éclairage ?</Label>
+                <input required type="text"  th:field="*{eclairage}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <label for="vegetalien">Êtes-vous végétalien (vegan) ?</label><br>
+                <input type="radio" th:field="*{vegetalien}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{vegetalien}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="fruitETLegume">Consommez-vous des fruits et des légumes ?</label><br>
+                <input type="radio" th:field="*{fruitETLegume}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{fruitETLegume}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="produitLaitier">Consommez-vous des produits laitiers ?</label><br>
+                <input type="radio" th:field="*{produitLaitier}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{produitLaitier}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="oeufs">Consommez-vous des oeufs ?</label><br>
+                <input type="radio" th:field="*{oeufs}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{oeufs}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="viande">Consommez-vous de la viande ?</label><br>
+                <input type="radio" th:field="*{viande}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{viande}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <Label for="canette">En moyenne, combien de boissons en canette consommez-vous par jour ? (indiquer 0 si vous n'en consommez pas)</Label>
+                <input required type="number"  th:field="*{canette}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <label for="emballage">Achetez-vous UNIQUEMENT des produits sans emballage ?</label><br>
+                <input type="radio" th:field="*{emballage}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{emballage}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="locaux">Consommez-vous UNIQUEMENT des produits locaux et de saison ?</label><br>
+                <input type="radio" th:field="*{locaux}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{locaux}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <Label for="chat">Combien avez-vous de chat(s) ?</Label>
+                <input required type="number"  th:field="*{chat}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <Label for="chien">Combien avez-vous de chien(s) ?</Label>
+                <input required type="number"  th:field="*{chien}" class="formTextbox" >
+            </div>
+            <br>
+            <div>
+                <label for="cheval">Avez-vous un cheval ?</label><br>
+                <input type="radio" th:field="*{cheval}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{cheval}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="equipementNumerique">Avez-vous au moins un équipement numérique par personne dans le foyer ?</label><br>
+                <input type="radio" th:field="*{equipementNumerique}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{equipementNumerique}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="internet">En moyenne, passez-vous plus de 2 heures par jour sur Internet ?</label><br>
+                <input type="radio" th:field="*{internet}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{internet}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="videos">En moyenne, regardez-vous plus d'une heure de vidéo par jour (ex: Netflix, YouTube, VOD,...) ?</label><br>
+                <input type="radio" th:field="*{videos}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{videos}" class="formRadio" th:value="0"> Non
+            </div>
+            <br>
+            <div>
+                <label for="vetements">En moyenne, achetez-vous pour plus de 600€ de vêtements et chaussures par an ?</label><br>
+                <input type="radio" th:field="*{vetements}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{vetements}" class="formRadio" th:value="0"> Non
             </div>
 
 

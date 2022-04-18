@@ -71,7 +71,7 @@ public class Question {
 	@Column(name="doucheFrequence")
 	private int doucheFrequence;
 	@Column(name="doucheDuree")
-	private String doucheDuree;
+	private int doucheDuree;
 	@Column(name="bouilloire")
 	private int bouilloire;
 	@Column(name="plaqueCuisson")
@@ -127,7 +127,7 @@ public class Question {
 		//obligatoire pour que hibernate fonctionne
 	}
 
-	public Question(int id, String prenom, String email, String pays, int voiturePossede, int voitureKM, String voitureEnergie, int voitureConso, int voitureKMSeul, int voitureKMTous, String voitureRemplacement, int avionKM, int trainKM, int logementAdulte, int logementEnfant, String logementType, int logementSurface, String chauffageEnergie, int energieKWH, int energieFacture, int pompeChaleur, int temperatureConfort, int climatisation, int climatisationPieces, int climatisationsTemps, String bainsOUDouches, int doucheFrequence, String doucheDuree, int bouilloire, int plaqueCuisson, int four, int laveLinge, int secheLinge, int laveVaisselle, int refrigirateur, int congelateur, String eclairage, int vegetalien, int fruitETLegume, int produitLaitier, int oeufs, int viande, int canette, int emballage, int locaux, int chat, int chien, int cheval, int equipementNumerique, int internet, int videos, int vetements) {
+	public Question(int id, String prenom, String email, String pays, int voiturePossede, int voitureKM, String voitureEnergie, int voitureConso, int voitureKMSeul, int voitureKMTous, String voitureRemplacement, int avionKM, int trainKM, int logementAdulte, int logementEnfant, String logementType, int logementSurface, String chauffageEnergie, int energieKWH, int energieFacture, int pompeChaleur, int temperatureConfort, int climatisation, int climatisationPieces, int climatisationsTemps, String bainsOUDouches, int doucheFrequence, int doucheDuree, int bouilloire, int plaqueCuisson, int four, int laveLinge, int secheLinge, int laveVaisselle, int refrigirateur, int congelateur, String eclairage, int vegetalien, int fruitETLegume, int produitLaitier, int oeufs, int viande, int canette, int emballage, int locaux, int chat, int chien, int cheval, int equipementNumerique, int internet, int videos, int vetements) {
 		this.id = id;
 		this.prenom = prenom;
 		this.email = email;
@@ -401,11 +401,11 @@ public class Question {
 		this.doucheFrequence=doucheFrequence;
 	}
 
-	public String getDoucheDuree(){
+	public int getDoucheDuree(){
 		return doucheDuree;
 	}
 
-	public void setDoucheDuree(String doucheDuree){
+	public void setDoucheDuree(int doucheDuree){
 		this.doucheDuree=doucheDuree;
 	}
 
