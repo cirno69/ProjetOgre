@@ -34,14 +34,14 @@
             </div>
             <br>
             <div>
-                <Label for="voiturePossede">Avez-vous une voiture ?</Label>
-                <input required type="text"  th:field="*{voiturePossede}" class="formTextbox" >
-
+                <label for="voiturePossede">Avez-vous une voiture ?</label><br>
+                <input type="radio" th:field="*{voiturePossede}" class="formRadio" th:value="1"> Oui
+                <input type="radio" th:field="*{voiturePossede}" class="formRadio" th:value="0"> Non
             </div>
             <br>
             <div>
                 <Label for="voitureKM">Même si vous ne possédez pas de voiture, combien de kilomètres par an effectuez-vous en moyenne (avec d'autres personnes) ?</Label>
-                <input required type="text"  th:field="*{voitureKM}" class="formTextbox" >
+                <input required type="number"  th:field="*{voitureKM}" class="formTextbox" >
 
             </div>
             <br>
@@ -53,13 +53,13 @@
             <br>
             <div>
                 <Label for="voitureConso">Quelle est la consommation moyenne, en litres pour 100 kilomètres, de ce véhicule ? (ex: 6)</Label>
-                <input required type="text"  th:field="*{voitureConso}" class="formTextbox" >
+                <input required type="number"  th:field="*{voitureConso}" class="formTextbox" >
 
             </div>
             <br>
             <div>
                 <Label for="voitureKMSeul">(VOITURE) En moyenne, combien de kilomètres par an parcourez-vous seul ?</Label>
-                <input required type="text"  th:field="*{voitureKMSeul}" class="formTextbox" >
+                <input required type="number"  th:field="*{voitureKMSeul}" class="formTextbox" >
 
             </div>
             <br>

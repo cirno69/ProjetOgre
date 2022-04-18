@@ -217,147 +217,147 @@ public class Question {
 		this.pays=pays;
 	}
 
-	public int getVoiturepossede(){
+	public int getVoiturePossede(){
 		return voiturePossede;
 	}
 
-	public void setVoiturepossede(int voiturePossede){
+	public void setVoiturePossede(int voiturePossede){
 		this.voiturePossede=voiturePossede;
 	}
 
-	public int getVoiturekm(){
+	public int getVoitureKM(){
 		return voitureKM;
 	}
 
-	public void setVoiturekm(int voitureKM){
+	public void setVoitureKM(int voitureKM){
 		this.voitureKM=voitureKM;
 	}
 
-	public String getVoitureenergie(){
+	public String getVoitureEnergie(){
 		return voitureEnergie;
 	}
 
-	public void setVoitureenergie(String voitureEnergie){
+	public void setVoitureEnergie(String voitureEnergie){
 		this.voitureEnergie=voitureEnergie;
 	}
 
-	public int getVoitureconso(){
+	public int getVoitureConso(){
 		return voitureConso;
 	}
 
-	public void setVoitureconso(int voitureConso){
+	public void setVoitureConso(int voitureConso){
 		this.voitureConso=voitureConso;
 	}
 
-	public int getVoiturekmseul(){
+	public int getVoitureKMSeul(){
 		return voitureKMSeul;
 	}
 
-	public void setVoiturekmseul(int voitureKMSeul){
+	public void setVoitureKMSeul(int voitureKMSeul){
 		this.voitureKMSeul=voitureKMSeul;
 	}
 
-	public int getVoiturekmtous(){
+	public int getVoitureKMTous(){
 		return voitureKMTous;
 	}
 
-	public void setVoiturekmtous(int voitureKMTous){
+	public void setVoitureKMTous(int voitureKMTous){
 		this.voitureKMTous=voitureKMTous;
 	}
 
-	public String getVoitureremplacement(){
+	public String getVoitureRemplacement(){
 		return voitureRemplacement;
 	}
 
-	public void setVoitureremplacement(String voitureRemplacement){
+	public void setVoitureRemplacement(String voitureRemplacement){
 		this.voitureRemplacement=voitureRemplacement;
 	}
 
-	public int getAvionkm(){
+	public int getAvionKM(){
 		return avionKM;
 	}
 
-	public void setAvionkm(int avionKM){
+	public void setAvionKM(int avionKM){
 		this.avionKM=avionKM;
 	}
 
-	public int getTrainkm(){
+	public int getTrainKM(){
 		return trainKM;
 	}
 
-	public void setTrainkm(int trainKM){
+	public void setTrainKM(int trainKM){
 		this.trainKM=trainKM;
 	}
 
-	public int getLogementadulte(){
+	public int getLogementAdulte(){
 		return logementAdulte;
 	}
 
-	public void setLogementadulte(int logementAdulte){
+	public void setLogementAdulte(int logementAdulte){
 		this.logementAdulte=logementAdulte;
 	}
 
-	public int getLogementenfant(){
+	public int getLogementEnfant(){
 		return logementEnfant;
 	}
 
-	public void setLogementenfant(int logementEnfant){
+	public void setLogementEnfant(int logementEnfant){
 		this.logementEnfant=logementEnfant;
 	}
 
-	public String getLogementtype(){
+	public String getLogementType(){
 		return logementType;
 	}
 
-	public void setLogementtype(String logementType){
+	public void setLogementType(String logementType){
 		this.logementType=logementType;
 	}
 
-	public int getLogementsurface(){
+	public int getLogementSurface(){
 		return logementSurface;
 	}
 
-	public void setLogementsurface(int logementSurface){
+	public void setLogementSurface(int logementSurface){
 		this.logementSurface=logementSurface;
 	}
 
-	public String getChauffageenergie(){
+	public String getChauffageEnergie(){
 		return chauffageEnergie;
 	}
 
-	public void setChauffageenergie(String chauffageEnergie){
+	public void setChauffageEnergie(String chauffageEnergie){
 		this.chauffageEnergie=chauffageEnergie;
 	}
 
-	public int getEnergiekwh(){
+	public int getEnergieKWH(){
 		return energieKWH;
 	}
 
-	public void setEnergiekwh(int energieKWH){
+	public void setEnergieKWH(int energieKWH){
 		this.energieKWH=energieKWH;
 	}
 
-	public int getEnergiefacture(){
+	public int getEnergieFacture(){
 		return energieFacture;
 	}
 
-	public void setEnergiefacture(int energieFacture){
+	public void setEnergieFacture(int energieFacture){
 		this.energieFacture=energieFacture;
 	}
 
-	public int getPompechaleur(){
+	public int getPompeChaleur(){
 		return pompeChaleur;
 	}
 
-	public void setPompechaleur(int pompeChaleur){
+	public void setPompeChaleur(int pompeChaleur){
 		this.pompeChaleur=pompeChaleur;
 	}
 
-	public int getTemperatureconfort(){
+	public int getTemperatureConfort(){
 		return temperatureConfort;
 	}
 
-	public void setTemperatureconfort(int temperatureConfort){
+	public void setTemperatureConfort(int temperatureConfort){
 		this.temperatureConfort=temperatureConfort;
 	}
 
@@ -369,43 +369,43 @@ public class Question {
 		this.climatisation=climatisation;
 	}
 
-	public int getClimatisationpieces(){
+	public int getClimatisationPieces(){
 		return climatisationPieces;
 	}
 
-	public void setClimatisationpieces(int climatisationPieces){
+	public void setClimatisationPieces(int climatisationPieces){
 		this.climatisationPieces=climatisationPieces;
 	}
 
-	public int getClimatisationstemps(){
+	public int getClimatisationsTemps(){
 		return climatisationsTemps;
 	}
 
-	public void setClimatisationstemps(int climatisationsTemps){
+	public void setClimatisationsTemps(int climatisationsTemps){
 		this.climatisationsTemps=climatisationsTemps;
 	}
 
-	public String getBainsoudouches(){
+	public String getBainsOUDouches(){
 		return bainsOUDouches;
 	}
 
-	public void setBainsoudouches(String bainsOUDouches){
+	public void setBainsOUDouches(String bainsOUDouches){
 		this.bainsOUDouches=bainsOUDouches;
 	}
 
-	public int getDouchefrequence(){
+	public int getDoucheFrequence(){
 		return doucheFrequence;
 	}
 
-	public void setDouchefrequence(int doucheFrequence){
+	public void setDoucheFrequence(int doucheFrequence){
 		this.doucheFrequence=doucheFrequence;
 	}
 
-	public String getDoucheduree(){
+	public String getDoucheDuree(){
 		return doucheDuree;
 	}
 
-	public void setDoucheduree(String doucheDuree){
+	public void setDoucheDuree(String doucheDuree){
 		this.doucheDuree=doucheDuree;
 	}
 
@@ -417,11 +417,11 @@ public class Question {
 		this.bouilloire=bouilloire;
 	}
 
-	public int getPlaquecuisson(){
+	public int getPlaqueCuisson(){
 		return plaqueCuisson;
 	}
 
-	public void setPlaquecuisson(int plaqueCuisson){
+	public void setPlaqueCuisson(int plaqueCuisson){
 		this.plaqueCuisson=plaqueCuisson;
 	}
 
@@ -433,27 +433,27 @@ public class Question {
 		this.four=four;
 	}
 
-	public int getLavelinge(){
+	public int getLaveLinge(){
 		return laveLinge;
 	}
 
-	public void setLavelinge(int laveLinge){
+	public void setLaveLinge(int laveLinge){
 		this.laveLinge=laveLinge;
 	}
 
-	public int getSechelinge(){
+	public int getSecheLinge(){
 		return secheLinge;
 	}
 
-	public void setSechelinge(int secheLinge){
+	public void setSecheLinge(int secheLinge){
 		this.secheLinge=secheLinge;
 	}
 
-	public int getLavevaisselle(){
+	public int getLaveVaisselle(){
 		return laveVaisselle;
 	}
 
-	public void setLavevaisselle(int laveVaisselle){
+	public void setLaveVaisselle(int laveVaisselle){
 		this.laveVaisselle=laveVaisselle;
 	}
 
@@ -489,19 +489,19 @@ public class Question {
 		this.vegetalien=vegetalien;
 	}
 
-	public int getFruitetlegume(){
+	public int getFruitETLegume(){
 		return fruitETLegume;
 	}
 
-	public void setFruitetlegume(int fruitETLegume){
+	public void setFruitETLegume(int fruitETLegume){
 		this.fruitETLegume=fruitETLegume;
 	}
 
-	public int getProduitlaitier(){
+	public int getProduitLaitier(){
 		return produitLaitier;
 	}
 
-	public void setProduitlaitier(int produitLaitier){
+	public void setProduitLaitier(int produitLaitier){
 		this.produitLaitier=produitLaitier;
 	}
 
@@ -569,11 +569,11 @@ public class Question {
 		this.cheval=cheval;
 	}
 
-	public int getEquipementnumerique(){
+	public int getEquipementNumerique(){
 		return equipementNumerique;
 	}
 
-	public void setEquipementnumerique(int equipementNumerique){
+	public void setEquipementNumerique(int equipementNumerique){
 		this.equipementNumerique=equipementNumerique;
 	}
 
