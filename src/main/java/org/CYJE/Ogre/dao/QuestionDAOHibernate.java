@@ -22,7 +22,7 @@ public class QuestionDAOHibernate implements QuestionDAO {
 	public List<Question> getQuestion() {
 		
 		Session session = entityManager.unwrap(Session.class); //session hibernate
-		Query<Question> query = session.createQuery("from Question", Question.class);
+		Query<Question> query = session.createQuery("from question", Question.class);
 		List<Question> questions = query.getResultList();
 		return questions;
 	}
