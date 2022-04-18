@@ -16,5 +16,5 @@ public class LoginController {
 	public String ShowerreurAuthorization() {
 		return "erreur-501";
 	}
-	
+
 }

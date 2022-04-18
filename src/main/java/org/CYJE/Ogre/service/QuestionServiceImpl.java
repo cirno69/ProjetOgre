@@ -38,5 +38,4 @@ public class QuestionServiceImpl implements QuestionService {
 		questionDAO.saveReponse(reponses);
 	}
 
-
 }

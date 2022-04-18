@@ -1,5 +1,7 @@
 package org.CYJE.Ogre.controller;
 
+import java.util.List;
+
 import org.CYJE.Ogre.entity.Adherant;
 import org.CYJE.Ogre.entity.Question;
 import org.CYJE.Ogre.service.AdherantService;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -55,5 +58,54 @@ public class FormController {
 		questionService.saveReponse(question);
 		return "redirect:/";
 	}
-
+	
+	@RequestMapping("resultats")
+	public String showResults() {
+		
+		return "resultats";
+	}
+	
+	
+	@RequestMapping("/calculConsoVoiture")
+	public String calculConsoVoiture(Model model, @RequestParam String emailUtilisateur) {
+		List<Question> listeQ = questionService.getQuestion();
+		Question q = null;
+		boolean trouve = false;
+		int i = 0;
+		
+		do {
+			
+			if(listeQ.get(i).getEmail().equalsIgnoreCase(emailUtilisateur)) {
+				trouve = true;
+				q = listeQ.get(i);
+			}
+			else
+				i++;
+			
+		}while(!trouve);
+		
+		if(q!=null) {
+			final double valeurCalorifique = 10;
+			final double nbJoursParAn = 365; 
+			int distanceParAnSeul = q.getVoitureKMSeul(), distanceParAnFamille = q.getVoitureKMTous(), nbPersonnesMenage = q.getLogementEnfant() + q.getLogementAdulte();
+			double consoPourCentKm = q.getVoitureConso();
+			double distanceParJourSeul, distanceParLitreSeul, energieParJourSeul;
+			double distanceParJourFamille, distanceParLitreFamille, energieParJourFamille, energieParJourFamillePourUnePersonne;
+			
+			distanceParJourSeul = (double)distanceParAnSeul / nbJoursParAn;
+			distanceParLitreSeul = 100 / consoPourCentKm;
+		    energieParJourSeul = ( distanceParJourSeul / distanceParLitreSeul ) * valeurCalorifique;
+		    
+		    distanceParJourFamille = (double)distanceParAnFamille / nbJoursParAn;
+		    distanceParLitreFamille = 100 / consoPourCentKm;
+		    energieParJourFamille = ( distanceParJourFamille / distanceParLitreFamille ) * valeurCalorifique;
+		    energieParJourFamillePourUnePersonne = energieParJourFamille / nbPersonnesMenage;
+			
+		    model.addAttribute("res", energieParJourSeul + energieParJourFamillePourUnePersonne);
+		}
+		else
+			model.addAttribute("res", "Rien");
+	    
+		return "resultats";
+	}
 }

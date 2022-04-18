@@ -6,10 +6,16 @@ import javax.persistence.EntityManager;
 
 import org.CYJE.Ogre.entity.Adherant;
 import org.CYJE.Ogre.entity.Question;
+import org.CYJE.Ogre.dao.QuestionDAO;
+//import 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+import javax.persistence.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+
+
 @Repository
 public class QuestionDAOHibernate implements QuestionDAO {
 	
@@ -22,9 +28,10 @@ public class QuestionDAOHibernate implements QuestionDAO {
 
 	@Override
 	public List<Question> getQuestion() {
-		
+	    
 		Session session = entityManager.unwrap(Session.class); //session hibernate
-		Query<Question> query = session.createQuery("from question", Question.class);
+		//Query<Question> query = session.createQuery("from questions", Question.class);
+		Query<Question> query = (Query<Question>) entityManager.createNativeQuery("select * from questions", Question.class);
 		List<Question> questions = query.getResultList();
 		return questions;
 	}
