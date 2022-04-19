@@ -601,13 +601,4 @@ public class Question {
 		this.vetements=vetements;
 	}
 
-	
-
-	
-	
-
-	
-	
-	
-
 }
