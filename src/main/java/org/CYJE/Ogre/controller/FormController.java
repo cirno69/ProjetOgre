@@ -37,12 +37,11 @@ public class FormController {
 		return "form";
 	}
 	
-//	@GetMapping("edit/{id}")
 	@RequestMapping(value = "edit/{id}", method = RequestMethod.GET)
 	public String showEditForm(Model model, @PathVariable int id) { 
 		Question question = questionService.getReponse(id);
 		model.addAttribute("question", question);
-		return "formEdit.html";
+		return "form";
 	}
 
 	@PostMapping("/form/save")

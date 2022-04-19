@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <link rel="icon" type="image/png"  href="/images/logos/OGRE.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+    <title>OGRE</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+</head>
+<body>
+    <div th:replace = "miseEnForme/header :: header"></div>
+    <div class="content">
+    <!--<div class="centerbt">
+    <button class="btn-grad" th:attr="onclick=|biencopie('${mailinglist}')|">
+        Copier la mailing Liste 
+    </button>
+    </div>-->
+    
+   
+    
+    <br><br><br>
+    <div>
+        <p class="titretab">Liste des participants à l'atelier</p>
+    </div>
+    <table class="tableau">
+        <thead>
+            
+            <tr>
+                <th> Prénom </th>
+                <th> email </th>
+                <th> Editer </th>
+                <th> Supprimer </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="participant,iterStat : ${participants}" th:class="${iterStat.odd}? 'odd' : 'even'">
+                <td class="clickable" th:text="${participant.prenom}" th:attr="onclick=|location.href='participant/${participant.id}'|"></td>
+                <td class="clickable" th:text="${participant.email}" th:attr="onclick=|location.href='participant/${participant.id}'|"></td>
+                <td class="edit clickable"><img src="/images/edit.png" height="40px" width="40px" alt="" th:attr="onclick=|location.href='/edit/${participant.id}'|"></td>
+                <td class="suppr clickable"><img src="/images/croix.png" height="40px" width="40px" alt="" th:attr="onclick=|location.href='deleteA/${participant.id}'|"></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div th:replace="miseEnForme/footer :: footer"></div>
+</body>

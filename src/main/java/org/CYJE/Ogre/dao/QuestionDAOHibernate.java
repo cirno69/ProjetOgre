@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import org.CYJE.Ogre.entity.Adherant;
 import org.CYJE.Ogre.entity.Question;
 import org.CYJE.Ogre.dao.QuestionDAO;
 //import 
@@ -30,8 +29,7 @@ public class QuestionDAOHibernate implements QuestionDAO {
 	public List<Question> getQuestion() {
 	    
 		Session session = entityManager.unwrap(Session.class); //session hibernate
-		//Query<Question> query = session.createQuery("from questions", Question.class);
-		Query<Question> query = (Query<Question>) entityManager.createNativeQuery("select * from questions", Question.class);
+		Query<Question> query = session.createQuery("SELECT a FROM Question a", Question.class);
 		List<Question> questions = query.getResultList();
 		return questions;
 	}

@@ -93,7 +93,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `questions`
 --
 
-CREATE TABLE `questions` (
+CREATE TABLE `question` (
   `id` int NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,

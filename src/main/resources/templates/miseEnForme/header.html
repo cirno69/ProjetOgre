@@ -2,10 +2,8 @@
     <img class="headerLogo" src="/images/logos/logoOGRE.png" onclick="location.href='/'"/>
     <div class="headerButtons">
         <!--<a class="headerButton" sec:authorize="hasRole('ROLE_ADMIN')" href='/admin/adherants'>-->
-       <a class="headerButton" href="/form">Inscription</a> 
-       <a sec:authorize="isAuthenticated()" class="headerButton"  href='/admin/adherants'> Adherants</a>
-       <a sec:authorize="isAuthenticated()" class="headerButton"  href='/admin/cotisants'>Cotisants</a>
-       <a sec:authorize="hasRole('TRESORIER')" class="headerButton" href="/tresorie/validation"> Valider cotisants </a>
+       <a class="headerButton" href="/form">Répondre au questionnaire</a> 
+       <a sec:authorize="isAuthenticated()" class="headerButton"  href='/admin/participants'> participants</a>
     </div>
         <a sec:authorize="isAnonymous()" class="headerCompte"  href='/connexion'>Connexion</a>
         <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="POST">

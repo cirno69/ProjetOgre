@@ -68,26 +68,6 @@
             </div>
             <br>
             <div>
-                <Label for="voitureEnergie">Quelle énergie utilise votre voiture ?</Label>
-                <input required type="text"  th:field="*{voitureEnergie}" class="formTextbox" >
-            </div>
-            <br>
-            <div>
-                <Label for="voitureConso">Quelle est la consommation moyenne, en litres pour 100 kilomètres, de ce véhicule ? (ex: 6)</Label>
-                <input required type="number"  th:field="*{voitureConso}" class="formTextbox" >
-            </div>
-            <br>
-            <div>
-                <Label for="voitureKMSeul">(VOITURE) En moyenne, combien de kilomètres par an parcourez-vous seul ?</Label>
-                <input required type="number"  th:field="*{voitureKMSeul}" class="formTextbox" >
-            </div>
-            <br>
-            <div>
-                <Label for="voitureKMTous">(VOITURE) En moyenne, combien de kilomètres par an parcourez-vous avec les personnes composant le ménage ? (ex: vacances)</Label>
-                <input required type="number"  th:field="*{voitureKMTous}" class="formTextbox" >
-            </div>
-            <br>
-            <div>
                 <Label for="voitureRemplacement">En moyenne, quelle est votre fréquence de remplacement de votre véhicule ?</Label>
                 <input required type="text"  th:field="*{voitureRemplacement}" class="formTextbox" >
             </div>
@@ -149,7 +129,7 @@
             </div>
             <br>
             <div>
-                <label for="climatisation">Votre température de confort est-elle supérieure à 19°C ?</label><br>
+                <label for="climatisation">23. Utilisez-vous un système de climatisation?</label><br>
                 <input type="radio" th:field="*{climatisation}" class="formRadio" th:value="1"> Oui
                 <input type="radio" th:field="*{climatisation}" class="formRadio" th:value="0"> Non
             </div>
