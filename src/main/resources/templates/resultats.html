@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <link rel="icon" type="image/png"  href="/images/logos/OGRE.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+    <title>OGRE</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+</head>
+<body>
+    <div th:replace = "miseEnForme/header :: header"></div>
+    <br><br>
+    <div class="content">
+        <form th:action="@{/calculConsoVoiture}" method="get">
+            <div>
+                <label>Donner email : </label>
+                <input name="emailUtilisateur" id="emailUtilisateur" required/>
+                <button type="submit" class="btn btn-primary">Calculer</button>
+            </div>
+        </form>
+        
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <label th:text="${trouve}"></label>
+                <div class="panel-body" th:if="${trouve}">
+                    <label>Résultats  : </label>
+                    
+                    <br>
+                    
+                    <label>Consommation voiture : </label>
+                    <label th:text="${voiture}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation avion : </label>
+                    <label th:text="${avion}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation train : </label>
+                    <label th:text="${train}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation chauffage : </label>
+                    <label th:text="${chauffage}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation climatisation : </label>
+                    <label th:text="${climatisation}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation tâches : </label>
+                    <label th:text="${taches}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation nutrition : </label>
+                    <label th:text="${nutrition}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation éclairage : </label>
+                    <label th:text="${eclairage}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation produits bruns : </label>
+                    <label th:text="${produitsBruns}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation marchandises : </label>
+                    <label th:text="${marchandises}"></label>
+                    
+                    <br>
+                    
+                    <label>Consommation services publics : </label>
+                    <label th:text="${servicesPublics}"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+<div th:replace="miseEnForme/footer :: footer"></div>
+</body>
+</html>

@@ -31,32 +31,6 @@ SET time_zone = "+00:00";
 -- Table structure for table `accounts`
 --
 
-DROP TABLE IF EXISTS adherant;
-
-CREATE TABLE adherant (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  nom varchar(45) DEFAULT NULL,
-  prenom varchar(45) DEFAULT NULL,
-  genre varchar(45) DEFAULT NULL,
-  date_de_naissance date DEFAULT NULL,
-  promo varchar(45) DEFAULT NULL,
-  campus varchar(45) DEFAULT NULL,
-  email varchar(45) DEFAULT NULL,
-  mailing_liste BOOL DEFAULT 0,
-  cotisant tinyint DEFAULT 0,
-  connaissances_info varchar(45) DEFAULT NULL,
-  attentes varchar(45) DEFAULT NULL,
-  centres_interet varchar(45) DEFAULT NULL);
-
-    INSERT INTO adherant Values (1, 'John', 'Doe', 'M','1999-03-30', 'ING2','Cergy', 'John@cy-tech.fr', 1, 1,"","","");
-    INSERT INTO adherant Values (2, 'rené', 'provence', 'neutre','1999-03-30', 'ING2','Pau', 'rené@cy-tech.fr', 0, 0,"","","");
-    INSERT INTO adherant Values (3, 'guillaume', 'Ricou', 'M','1999-04-30', 'ING3','Cergy', 'guigui@cy-tech.fr', 1, 1,"","","");
-    INSERT INTO adherant Values (4, 'John', 'Deux', 'F','1999-03-30', 'ING2','Cergy', 'John2@cy-tech.fr', 1, 0,"","","");
-    INSERT INTO adherant Values (5, 'John', 'trois', 'M','1999-03-30', 'ING3','Cergy', 'Johny3@cy-tech.fr', 1, 0,"","","");
-    INSERT INTO adherant Values (6, 'DAVID', 'Doa', 'David','1999-03-30', 'ING3','Cergy', 'David@cy-tech.fr', 1, 1,"","","");
-  	INSERT INTO adherant Values (7, 'Jeveu', 'Payer', 'argent','2000-12-30', 'ING3','Cergy', 'argentd@cy-tech.fr', 1, 2,"","","");
-
-
 CREATE TABLE `accounts` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -153,9 +127,9 @@ CREATE TABLE `question` (
 --
 
 --
--- Indexes for table `questions`
+-- Indexes for table `question`
 --
-ALTER TABLE `questions`
+ALTER TABLE `question`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -163,11 +137,13 @@ ALTER TABLE `questions`
 --
 
 --
--- AUTO_INCREMENT for table `questions`
+-- AUTO_INCREMENT for table `question`
 --
-ALTER TABLE `questions`
+ALTER TABLE `question`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
+
+-- INSERT INTO question Values(2,"cirno","cirno@gmail.com","Tchad",1,1000,"Diesel",20,1000,0,3,0,0,1,0,"appartement",10,"froid",0,0,0,1,1,4,12,"douche",2,10,0,0,50,20,10,120,0,3,"Ampoule basse consomation",0,1,0,1,1,1,0,1,0,0,0,1,1,1,0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

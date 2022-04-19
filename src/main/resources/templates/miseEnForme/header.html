@@ -1,8 +1,8 @@
 <div class="header" th:fragment="header">
     <img class="headerLogo" src="/images/logos/logoOGRE.png" onclick="location.href='/'"/>
     <div class="headerButtons">
-        <!--<a class="headerButton" sec:authorize="hasRole('ROLE_ADMIN')" href='/admin/adherants'>-->
        <a class="headerButton" href="/form">Répondre au questionnaire</a> 
+       <a class="headerButton" href="/resultats">Acceder à mes resultats</a> 
        <a sec:authorize="isAuthenticated()" class="headerButton"  href='/admin/participants'> participants</a>
     </div>
         <a sec:authorize="isAnonymous()" class="headerCompte"  href='/connexion'>Connexion</a>

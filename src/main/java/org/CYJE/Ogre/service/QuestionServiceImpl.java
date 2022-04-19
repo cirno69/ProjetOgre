@@ -3,7 +3,6 @@ package org.CYJE.Ogre.service;
 import java.util.List;
 
 import org.CYJE.Ogre.dao.QuestionDAO;
-import org.CYJE.Ogre.entity.Adherant;
 import org.CYJE.Ogre.entity.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,5 +37,10 @@ public class QuestionServiceImpl implements QuestionService {
 		questionDAO.saveReponse(reponses);
 	}
 
+	@Override
+	@Transactional
+	public void deleteReponse(int id) {
+		questionDAO.deleteReponse(id);
+	}
 
 }
