@@ -26,12 +26,12 @@ public class AdminController {
 		this.questionService = questionService;
 	}
 	
-	@GetMapping("/adherants")
+	@GetMapping("/participants")
     public String adherants(Model model){
         model.addAttribute("participants",questionService.getQuestion());
 		//String MLstring = questionService.getMailingList();
         //model.addAttribute("mailinglist",MLstring);
-        return("admin/adherants");
+        return("admin/participants");
     }
 
 	
