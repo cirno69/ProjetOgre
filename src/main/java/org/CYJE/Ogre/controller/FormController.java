@@ -2,11 +2,8 @@ package org.CYJE.Ogre.controller;
 
 import java.util.List;
 
-import org.CYJE.Ogre.entity.Adherant;
 import org.CYJE.Ogre.entity.Question;
-import org.CYJE.Ogre.service.AdherantService;
 import org.CYJE.Ogre.service.QuestionService;
-import org.hibernate.tool.schema.ast.GeneratedSqlScriptParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +15,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @Controller
@@ -58,13 +56,14 @@ public class FormController {
 		questionService.saveReponse(question);
 		return "redirect:/";
 	}
+
 	
 	@RequestMapping("resultats")
 	public String showResults() {
 		
 		return "resultats";
 	}
-	
+
 	
 	@RequestMapping("/calculConsoVoiture")
 	public String calculConsoVoiture(Model model, @RequestParam String emailUtilisateur) {
@@ -312,4 +311,5 @@ public class FormController {
 		
 		return Math.round((energieSecteurSante + energieSecteurDefense + energieUniversite + energieCollectivitesLocales)*100.0)/100.0;
 	}
+
 }

@@ -35,8 +35,8 @@
         </thead>
         <tbody>
             <tr th:each="participant,iterStat : ${participants}" th:class="${iterStat.odd}? 'odd' : 'even'">
-                <td class="clickable" th:text="${participant.prenom}" th:attr="onclick=|location.href='participant/${participant.id}'|"></td>
-                <td class="clickable" th:text="${participant.email}" th:attr="onclick=|location.href='participant/${participant.id}'|"></td>
+                <td class="clickable" th:text="${participant.prenom}" th:attr="onclick=|location.href='/calculConsoVoiture?emailUtilisateur=${participant.email}'|"></td>
+                <td class="clickable" th:text="${participant.email}" th:attr="onclick=|location.href='/calculConsoVoiture?emailUtilisateur=${participant.email}'|"></td>
                 <td class="edit clickable"><img src="/images/edit.png" height="40px" width="40px" alt="" th:attr="onclick=|location.href='/edit/${participant.id}'|"></td>
                 <td class="suppr clickable"><img src="/images/croix.png" height="40px" width="40px" alt="" th:attr="onclick=|location.href='deleteA/${participant.id}'|"></td>
             </tr>

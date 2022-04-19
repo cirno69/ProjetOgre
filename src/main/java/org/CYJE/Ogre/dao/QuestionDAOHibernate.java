@@ -46,4 +46,14 @@ public class QuestionDAOHibernate implements QuestionDAO {
 		Session session = entityManager.unwrap(Session.class);
 		session.saveOrUpdate(reponses);
 	}
+
+	@Override
+	public void deleteReponse(int id) {
+		
+		Session session = entityManager.unwrap(Session.class);
+		Query query = session.createQuery("delete from Question where id = :questionId");
+		query.setParameter("questionId", id);
+		query.executeUpdate();
+		
+	}
 }
