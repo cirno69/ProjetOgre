@@ -5,10 +5,7 @@ import org.CYJE.Ogre.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/admin")
 @Controller
@@ -20,14 +17,44 @@ public class AdminController {
 	public AdminController(QuestionService questionService) {
 		this.questionService = questionService;
 	}
-	
+
 	@GetMapping("/participants")
-    public String adherants(Model model){
-        model.addAttribute("participants",questionService.getQuestion());
+	public String adherants(Model model){
+		model.addAttribute("participants",questionService.getQuestion());
 		//String MLstring = questionService.getMailingList();
-        //model.addAttribute("mailinglist",MLstring);
-        return("admin/participants");
-    }
+		//model.addAttribute("mailinglist",MLstring);
+		return("admin/participants");
+	}
+
+	@GetMapping("/resultats-participants")
+	public String resultatsParticipants(Model model){
+		return("admin/resultats-participants");
+	}
+
+	@RequestMapping(value = "/api/getResult/{email}", method = RequestMethod.GET)
+	@ResponseBody
+	public String getResultatsParticipant(@PathVariable String email){
+		Question reponse = questionService.getReponse(email);
+		if (reponse == null) {
+			return "{\"success\":false,\"error\":\"Aucun participant avec cet email.\"}";
+		}
+		String tmp = "";
+		tmp += "\"id\":" + reponse.getId() + ",";
+
+		FormController f = new FormController();
+		tmp += "\"voiture\":" + f.consoVoiture(reponse) + ",";
+		tmp += "\"avion\":" + f.consoAvion(reponse) + ",";
+		tmp += "\"train\":" + f.consoTrain(reponse) + ",";
+		tmp += "\"chauffage\":" + f.consoChauffageProPerso(reponse) + ",";
+		tmp += "\"clim\":" + f.consoClim(reponse) + ",";
+		tmp += "\"tache\":" + f.consoTachesQuotidiennes(reponse) + ",";
+		tmp += "\"nutrition\":" + f.consoNutrition(reponse) + ",";
+		tmp += "\"eclairage\":" + f.consoEclairage() + ",";
+		tmp += "\"produitBruns\":" + f.consoProduitsBruns() + ",";
+		tmp += "\"marchandise\":" + f.consoMarchandise(reponse) + ",";
+		tmp += "\"servicePublic\":" + f.servicesPublic();
+		return "{\"resultat\": " + reponse.toJSON() + ",\"conso\": {" + tmp + "}}";
+	}
 
 	
 //	@DeleteMapping("deleteA/{id}")

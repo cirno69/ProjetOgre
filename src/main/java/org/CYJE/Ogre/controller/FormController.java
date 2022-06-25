@@ -27,7 +27,10 @@ public class FormController {
 	public FormController(QuestionService questionService) {
 		this.questionService = questionService;
 	}
-	
+
+	public FormController() {
+	}
+
 	@GetMapping("/form")
 	public String showForm(Model model) {
 		Question question = new Question();
@@ -162,7 +165,7 @@ public class FormController {
 	double consoTachesQuotidiennes(Question q) {
 		//Bain et douche
 		final double energiePourUneDouche = 2.8; //Kwh -> sur base d'une douche de 10 minutes avec 60 litres d'eau
-		boolean prendBain = Integer.parseInt(q.getBainsOUDouches())==1 ? true : false;
+		boolean prendBain = q.getBainsOUDouches()==1 ? true : false;
 		double tempsDouche = q.getDoucheDuree();
 		int doucheParJour = q.getDoucheFrequence();
 		double energieParJourDouche = tempsDouche * doucheParJour * energiePourUneDouche;

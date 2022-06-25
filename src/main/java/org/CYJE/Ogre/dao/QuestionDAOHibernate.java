@@ -5,11 +5,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import org.CYJE.Ogre.entity.Question;
-import org.CYJE.Ogre.dao.QuestionDAO;
-//import 
+//import
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-import javax.persistence.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -33,12 +31,22 @@ public class QuestionDAOHibernate implements QuestionDAO {
 		List<Question> questions = query.getResultList();
 		return questions;
 	}
-	
+
 	@Override
 	public Question getReponse(int id) {
 		Session session = entityManager.unwrap(Session.class);
 		Question reponse = session.get(Question.class,id);
 		return reponse;
+	}
+
+	@Override
+	public Question getReponse(String email) {
+		for (Question q : getQuestion()) {
+			if (q.getEmail().equalsIgnoreCase(email)) {
+				return q;
+			}
+		}
+		return null;
 	}
 
 	@Override

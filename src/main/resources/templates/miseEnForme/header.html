@@ -2,8 +2,9 @@
     <img class="headerLogo" src="/images/logos/logoOGRE.png" onclick="location.href='/'"/>
     <div class="headerButtons">
        <a class="headerButton" href="/form">Répondre au questionnaire</a> 
-       <a class="headerButton" href="/resultats">Acceder à mes resultats</a> 
-       <a sec:authorize="isAuthenticated()" class="headerButton"  href='/admin/participants'> participants</a>
+       <a class="headerButton" href="/resultats">Acceder à mes resultats</a>
+        <a sec:authorize="isAuthenticated()" class="headerButton"  href='/admin/participants'>Participants</a>
+        <a sec:authorize="isAuthenticated()" class="headerButton"  href='/admin/resultats-participants'>Partie Animateur</a>
     </div>
         <a sec:authorize="isAnonymous()" class="headerCompte"  href='/connexion'>Connexion</a>
         <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="POST">

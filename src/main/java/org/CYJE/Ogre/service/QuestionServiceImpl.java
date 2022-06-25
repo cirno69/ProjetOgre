@@ -43,4 +43,7 @@ public class QuestionServiceImpl implements QuestionService {
 		questionDAO.deleteReponse(id);
 	}
 
+	@Override
+	public Question getReponse(String email) {return questionDAO.getReponse(email);}
+
 }

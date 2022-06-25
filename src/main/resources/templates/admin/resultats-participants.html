@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="icon" type="image/png"  href="/images/logos/OGRE.png">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/resultats-participants.js"></script>
+  <title>OGRE</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+<div th:replace = "miseEnForme/header :: header"></div>
+<br><br>
+<div class="content">
+  <section class="hero">
+    <h3>Ajouter les résultats d'un participant :</h3>
+    <input type="email" id="email">
+    <button onclick="getResult()">Ajouter le participant</button>
+  </section>
+  <section class="output">
+    <table id="tableResult">
+      <tr>
+        <th>ID</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <th>Pays</th>
+        <th>Voitures Possédées</th>
+        <th>Voitures KM</th>
+        <th>Voiture Energie</th>
+        <th>Voiture Conso</th>
+        <th>Voiture KM Seul</th>
+        <th>Voiture KM Tous</th>
+        <th>Voiture Remplacement</th>
+        <th>Avion KM</th>
+        <th>Train KM</th>
+        <th>Logement Adulte</th>
+        <th>Logement Enfant</th>
+        <th>Logement Type</th>
+        <th>Logement Surface</th>
+        <th>Chauffage Energie</th>
+        <th>Energie KWH</th>
+        <th>Energie Facture</th>
+        <th>Pompe Chaleur</th>
+        <th>Température Confort</th>
+        <th>Climatisation</th>
+        <th>Climatisation Pieces</th>
+        <th>Climatisation Temps</th>
+        <th>Bains ou Douche</th>
+        <th>Douche Fréquence</th>
+        <th>Douche durée</th>
+        <th>Bouilloire</th>
+        <th>Plaque Cuisson</th>
+        <th>Four</th>
+        <th>Lave Linge</th>
+        <th>Séche Linge</th>
+        <th>Lave Vaisselle</th>
+        <th>Réfrigirateur</th>
+        <th>Congélateur</th>
+        <th>Eclairage</th>
+        <th>Végétalien</th>
+        <th>Fruit et Légume</th>
+        <th>Produits Laitier</th>
+        <th>Oeufs</th>
+        <th>Viande</th>
+        <th>Canette</th>
+        <th>Emballage</th>
+        <th>Locaux</th>
+        <th>Chat</th>
+        <th>Chien</th>
+        <th>Cheval</th>
+        <th>Equipement Numérique</th>
+        <th>Internet</th>
+        <th>Vidéo</th>
+        <th>Vetements</th>
+      </tr>
+    </table>
+  </section>
+<br><br><br>
+  <section>
+    <h3>Les consommations en KWH</h3>
+    <table id="consoResult">
+      <tr>
+        <th>ID Participant</th>
+        <th>Voiture</th>
+        <th>Avion</th>
+        <th>Train</th>
+        <th>Chauffage</th>
+        <th>Climatisation</th>
+        <th>Tâches</th>
+        <th>Nutrition</th>
+        <th>Eclairage</th>
+        <th>Produits Bruns</th>
+        <th>Marchandises</th>
+        <th>Services Publics</th>
+      </tr>
+    </table>
+  </section>
+</div>
+<div th:replace="miseEnForme/footer :: footer"></div>
+</body>
+</html>

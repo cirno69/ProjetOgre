@@ -2,6 +2,8 @@ package org.CYJE.Ogre.entity;
 
 
 
+import com.google.gson.Gson;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -67,7 +69,7 @@ public class Question {
 	@Column(name="climatisationsTemps")
 	private int climatisationsTemps;
 	@Column(name="bainsOUDouches")
-	private String bainsOUDouches;
+	private int bainsOUDouches;
 	@Column(name="doucheFrequence")
 	private int doucheFrequence;
 	@Column(name="doucheDuree")
@@ -127,7 +129,7 @@ public class Question {
 		//obligatoire pour que hibernate fonctionne
 	}
 
-	public Question(int id, String prenom, String email, String pays, int voiturePossede, int voitureKM, String voitureEnergie, int voitureConso, int voitureKMSeul, int voitureKMTous, String voitureRemplacement, int avionKM, int trainKM, int logementAdulte, int logementEnfant, String logementType, int logementSurface, String chauffageEnergie, int energieKWH, int energieFacture, int pompeChaleur, int temperatureConfort, int climatisation, int climatisationPieces, int climatisationsTemps, String bainsOUDouches, int doucheFrequence, int doucheDuree, int bouilloire, int plaqueCuisson, int four, int laveLinge, int secheLinge, int laveVaisselle, int refrigirateur, int congelateur, String eclairage, int vegetalien, int fruitETLegume, int produitLaitier, int oeufs, int viande, int canette, int emballage, int locaux, int chat, int chien, int cheval, int equipementNumerique, int internet, int videos, int vetements) {
+	public Question(int id, String prenom, String email, String pays, int voiturePossede, int voitureKM, String voitureEnergie, int voitureConso, int voitureKMSeul, int voitureKMTous, String voitureRemplacement, int avionKM, int trainKM, int logementAdulte, int logementEnfant, String logementType, int logementSurface, String chauffageEnergie, int energieKWH, int energieFacture, int pompeChaleur, int temperatureConfort, int climatisation, int climatisationPieces, int climatisationsTemps, int bainsOUDouches, int doucheFrequence, int doucheDuree, int bouilloire, int plaqueCuisson, int four, int laveLinge, int secheLinge, int laveVaisselle, int refrigirateur, int congelateur, String eclairage, int vegetalien, int fruitETLegume, int produitLaitier, int oeufs, int viande, int canette, int emballage, int locaux, int chat, int chien, int cheval, int equipementNumerique, int internet, int videos, int vetements) {
 		this.id = id;
 		this.prenom = prenom;
 		this.email = email;
@@ -385,11 +387,11 @@ public class Question {
 		this.climatisationsTemps=climatisationsTemps;
 	}
 
-	public String getBainsOUDouches(){
+	public int getBainsOUDouches(){
 		return bainsOUDouches;
 	}
 
-	public void setBainsOUDouches(String bainsOUDouches){
+	public void setBainsOUDouches(int bainsOUDouches){
 		this.bainsOUDouches=bainsOUDouches;
 	}
 
@@ -601,4 +603,8 @@ public class Question {
 		this.vetements=vetements;
 	}
 
+    public String toJSON() {
+		Gson gson = new Gson();
+		return gson.toJson(this, Question.class);
+    }
 }

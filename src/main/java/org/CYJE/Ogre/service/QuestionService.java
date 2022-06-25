@@ -10,4 +10,6 @@ public interface QuestionService {
 	public Question getReponse(int id);
 	public void saveReponse(Question reponses);
 	public void deleteReponse(int id);
+
+    Question getReponse(String email);
 }

@@ -8,6 +8,9 @@ public interface QuestionDAO {
 	
 	public List<Question> getQuestion();
 	public Question getReponse(int id);
-	public void saveReponse(Question reponses);
+
+    Question getReponse(String email);
+
+    public void saveReponse(Question reponses);
 	public void deleteReponse(int id);
 }

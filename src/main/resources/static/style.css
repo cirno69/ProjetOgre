@@ -323,3 +323,8 @@ tr.even{
     text-align: center;
     padding: auto;
 }
+
+
+table, th, td {
+    border: 1px solid black;
+}
