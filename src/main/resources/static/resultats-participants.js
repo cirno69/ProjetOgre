@@ -23,6 +23,7 @@ function getResult() {
 
 function fillTable1(jsonData) {
     table = document.getElementById("tableResult");
+    table.deleteRow(table.rows.length - 1);
     var row = table.insertRow(-1);
     var x = row.insertCell(-1);
     x.innerHTML = jsonData.id;
@@ -128,11 +129,26 @@ function fillTable1(jsonData) {
     x.innerHTML = jsonData.videos;
     x = row.insertCell(-1);
     x.innerHTML = jsonData.vetements;
+
+    row = table.insertRow(-1);
+    x = row.insertCell(-1);
+    x.colSpan = "4";
+    x.innerHTML = "Moyenne des résultats";
+    for(colonneID=4; colonneID<table.rows[1].getElementsByTagName('td').length; colonneID++) {
+        var sum = 0;
+        for(var ligneID=1; ligneID<table.rows.length - 1; ligneID++) {
+            sum += parseFloat(table.rows[ligneID].getElementsByTagName('td')[colonneID].innerHTML);
+        }
+        var avg = sum / (table.rows.length - 2);
+        x = row.insertCell(-1);
+        x.innerHTML = Math.round(avg * 100) / 100;
+    }
 }
 
 
 function fillTable2(jsonData) {
     table = document.getElementById("consoResult");
+    table.deleteRow(table.rows.length - 1);
     var row = table.insertRow(-1);
     var x = row.insertCell(-1);
     x.innerHTML = jsonData.id;
@@ -158,4 +174,17 @@ function fillTable2(jsonData) {
     x.innerHTML = jsonData.marchandise;
     x = row.insertCell(-1);
     x.innerHTML = jsonData.servicePublic;
+
+    row = table.insertRow(-1);
+    x = row.insertCell(-1);
+    x.innerHTML = "Moyenne des résultats";
+    for(colonneID=1; colonneID<table.rows[1].getElementsByTagName('td').length; colonneID++) {
+        var sum = 0;
+        for(var ligneID=1; ligneID<table.rows.length - 1; ligneID++) {
+            sum += parseFloat(table.rows[ligneID].getElementsByTagName('td')[colonneID].innerHTML);
+        }
+        var avg = sum / (table.rows.length - 2);
+        x = row.insertCell(-1);
+        x.innerHTML = Math.round(avg * 100) / 100;
+    }
 }
