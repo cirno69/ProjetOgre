@@ -93,7 +93,7 @@ CREATE TABLE `question` (
   `climatisation` int NOT NULL,
   `climatisationPieces` int NOT NULL,
   `climatisationsTemps` int NOT NULL,
-  `bainsOUDouches` varchar(255) NOT NULL,
+  `bainsOUDouches` int NOT NULL,
   `doucheFrequence` int NOT NULL,
   `doucheDuree` varchar(255) NOT NULL,
   `bouilloire` int NOT NULL,
