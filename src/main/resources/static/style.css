@@ -324,7 +324,16 @@ tr.even{
     padding: auto;
 }
 
-
 table, th, td {
     border: 1px solid black;
+}
+
+.tabResults > tr > td {
+	padding: 5px;
+	color: black;
+}
+
+.firstCol {
+	background-color: #f0f0f0;
+	color: black;
 }

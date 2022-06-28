@@ -14,7 +14,7 @@
     <div class="content">
         <form th:action="@{/calculConsoVoiture}" method="get">
             <div>
-                <label>Donner email : </label>
+                <label>Donner votre email : </label>
                 <input name="emailUtilisateur" id="emailUtilisateur" required/>
                 <button type="submit" class="btn btn-primary">Calculer</button>
             </div>
@@ -24,62 +24,59 @@
             <div class="panel panel-primary">
                 <label th:text="${trouve}"></label>
                 <div class="panel-body" th:if="${trouve}">
-                    <label>Résultats  : </label>
-                    
-                    <br>
-                    
-                    <label>Consommation voiture : </label>
-                    <label th:text="${voiture}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation avion : </label>
-                    <label th:text="${avion}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation train : </label>
-                    <label th:text="${train}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation chauffage : </label>
-                    <label th:text="${chauffage}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation climatisation : </label>
-                    <label th:text="${climatisation}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation tâches : </label>
-                    <label th:text="${taches}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation nutrition : </label>
-                    <label th:text="${nutrition}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation éclairage : </label>
-                    <label th:text="${eclairage}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation produits bruns : </label>
-                    <label th:text="${produitsBruns}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation marchandises : </label>
-                    <label th:text="${marchandises}"></label>
-                    
-                    <br>
-                    
-                    <label>Consommation services publics : </label>
-                    <label th:text="${servicesPublics}"></label>
+                	<table>
+					    <thead>
+					        <tr>
+					            <th colspan="2" style="text-align: center; background-color: #04aa6d; color: white">Résultats  : </th>
+					        </tr>
+					    </thead>
+					    <tbody class="tabResults">
+					        <tr>
+					            <td class="firstCol">Consommation voiture : </td>
+					            <td th:text="${voiture}"></td>
+					        </tr>
+					        <tr>
+						        <td class="firstCol">Consommation avion : </td>
+	                    		<td th:text="${avion}"></td>
+					        </tr>
+					        <tr>
+						        <td class="firstCol">Consommation train : </td>
+	                    		<td th:text="${train}"></td>
+					        </tr>
+					        <tr>
+						        <td class="firstCol">Consommation chauffage : </td>
+                    			<td th:text="${chauffage}"></td>
+					        </tr>
+					        <tr>
+					        	<td class="firstCol">Consommation climatisation : </td>
+                    			<td th:text="${climatisation}"></td>
+					        </tr>
+					        <tr>
+						        <td class="firstCol">Consommation tâches : </td>
+	                    		<td th:text="${taches}"></td>
+					        </tr>
+					        <tr>
+						        <td class="firstCol">Consommation nutrition : </td>
+	                    		<td th:text="${nutrition}"></td>
+					        </tr>
+					        <tr>
+						        <td class="firstCol">Consommation éclairage : </td>
+		                    	<td th:text="${eclairage}"></td>
+					        </tr>
+					        <tr>
+						        <td class="firstCol">Consommation produits bruns : </td>
+		                    	<td th:text="${produitsBruns}"></td>
+					        </tr>
+					        <tr>
+						        <td class="firstCol">Consommation marchandises : </td>
+	                    		<td th:text="${marchandises}"></td>
+					        </tr>
+					        <tr>
+						        <td class="firstCol">Consommation services publics : </td>
+	                    		<td th:text="${servicesPublics}"></td>
+					        </tr>
+					    </tbody>
+					</table>
                 </div>
             </div>
         </div>
