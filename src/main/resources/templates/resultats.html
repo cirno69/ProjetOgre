@@ -77,6 +77,26 @@
 					        </tr>
 					    </tbody>
 					</table>
+					
+					<br>
+					
+					<p>Si certaines de vos consommations nous semblent excessives, des boutons s'afficheront pour vous<br>mener sur des sites progiguant des conseils pour réduire sa consommation énergétique</p>
+					
+					<br>
+					
+					<a target="_blank" th:if="${voiture} > 5" href="https://www.quechoisir.org/conseils-voiture-10-regles-pour-consommer-moins-de-carburant-n8771/"><button class="buttonLink">Conseils pour la voiture</button></a>
+					
+					<a target="_blank" th:if="${avion} > 5" href="https://www.consoglobe.com/reduire-empreinte-carbone-avion-cg"><button class="buttonLink">Conseils pour l'avion</button></a>
+					
+					<a target="_blank" th:if="${train} > 5" href="https://www.consoglobe.com/pourquoi-voyager-en-train-est-ecoresponsable-cg"><button class="buttonLink">Conseils pour le train</button></a>
+					
+					<a target="_blank" th:if="${chauffage} > 5" href="https://www.quechoisir.org/conseils-chauffage-10-gestes-simples-pour-limiter-sa-consommation-energetique-au-quotidien-n4725/"><button class="buttonLink">Conseils pour le chauffage</button></a>
+					
+					<a target="_blank" th:if="${climatisation} > 5" href="https://www.edf.gp/nos-conseils/astuce-pour-reduire-votre-consommation-en-climatisation-1"><button class="buttonLink">Conseils pour la climatisation</button></a>
+					
+					<a target="_blank" th:if="${eclairage} > 5" href="https://www.futura-sciences.com/planete/questions-reponses/eco-consommation-eclairage-baisser-consommation-energie-1358/"><button class="buttonLink">Conseils pour l'éclairage</button></a>
+					
+					<a target="_blank" th:if="${produitsBruns} > 10" href="https://fr.linkedin.com/pulse/comment-reduire-sa-consommation-%C3%A9nerg%C3%A9tiq-en-%C3%A9tant-toguem-deffo"><button class="buttonLink">Conseils pour les produits bruns</button></a>
                 </div>
             </div>
         </div>
